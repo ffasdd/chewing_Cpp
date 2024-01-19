@@ -2,17 +2,13 @@
 
 using namespace std;
 
-int change_val(int* p) {
-	*p = 3;
-	return 0;
-}
-
 int main() {
-	int number = 5;
+	int a = 3;
+	int& another_a = a;
+	another_a = 5;
 
-	cout << number << endl;
-	change_val(&number);
-	cout << number << endl;
+	cout << "a: " << a << endl;
+	cout << "another_a: " << another_a << endl;
 
 	return 0;
 }
